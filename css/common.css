@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
+	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+#wrap * {
+    font-family: 'GmarketSansMedium';
+}
+header {
+    padding: 20px 0 ;
+    
+}
+.header_wrap {
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.header_wrap img {
+    height: 35px;
+}
+.header_wrap ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_wrap ul li {
+    margin-right: 20px;
+}
+
+.header_wrap ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 300;
+
+}
+
+#wrap header ul li.selected a {
+    color: #283c75;
+    font-weight: 600;
+}
+.header_mo  {
+    display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        display: none;
+    }
+    .header_mo {
+        display: block;
+        text-align: center;
+        border-bottom: none;
+        padding: 15px;
+        z-index: 1;
+        position: relative;
+    }
+    .header_mo .ham {
+        width: 55%;
+    }
+    .header_mo img {
+        width: 70%;
+        height: 20%;
+    }
+    .header_mo li a {
+        width: unset;
+        text-align: left;
+    }
+    .header_mo nav {
+        position: fixed;
+        top: 0;
+        right: -71%; 
+        width: 50%;
+        min-height: 100vh;
+        background: #fff;
+        z-index: 999;
+        transition: .3s;
+        display: block;
+        background-color: #fff;
+        
+    }
+    .header_wrap {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+    .header_wrap h1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+    .back1 {
+        position: fixed;
+        width: 100% !important;
+        height: 100%;
+        top: 0;
+        display: none;
+        z-index: 998;
+        left: 0;
+        background: #00000038;
+    }
+    nav.open + .back1 {
+        display: block;
+    }
+    nav.open {
+        right: 0; 
+        width: 70%;
+    }
+    .nav_logo {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center; /* Center vertically */
+        padding: 15px;
+    }
+    .i2 {
+        text-align: right !important;
+    }
+    .close {
+        display: block;
+        background: url(../img/mo-menu-1.png) no-repeat center/contain;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .nav_menu {
+        flex-direction: column;
+        padding: 15px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .nav_menu li {
+        padding: 25px;
+        background-color: #fff;
+        text-align: left;
+        color: #505050;
+        display: flex;
+        justify-content: flex-start !important;
+        width: unset;
+    }
+    .nav_menu li:last-child {
+        border-bottom: none;
+    }
+    .nav_menu li a {
+        display: block;
+        font-size: 18px;
+        color: #505050;
+    }
+    .nav_menu li a span {
+        font-size: 16px;
+        color: #2c2f2d;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+    .nav_menu li .n {
+        padding: 0;
+    }
+     .header_mo ul li.selected  {
+        border-left: 3px solid #283c75;
+    }
+     .header_mo ul li.selected a {
+        color: #283c75 !important;
+        font-size: 18px;
+    }
+}
